@@ -1,4 +1,7 @@
-package day9.homework.homework5;
+package src.day9.homework.homework5;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CreatingAccount {
     /**
@@ -18,4 +21,15 @@ public class CreatingAccount {
      *  click on "Sign in" button
      *  validate that message "Signed in successfully." is displayed
      **/
+
+    public static void main(String[] args) throws InterruptedException {
+
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://ultimateqa.com/filling-out-forms/");
+        driver.manage().window().maximize();
+
+
+    }
+
 }

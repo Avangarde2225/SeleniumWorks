@@ -1,7 +1,6 @@
-package day8;
+package src.day8;
 
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +12,7 @@ public class MondayProjectPartone {
 
     public static void main(String[] args) throws InterruptedException {
 
-    System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+    System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
 
     WebDriver driver = new ChromeDriver();
 

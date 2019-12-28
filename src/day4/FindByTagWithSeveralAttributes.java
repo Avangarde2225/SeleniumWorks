@@ -1,4 +1,4 @@
-package day4;
+package src.day4;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FindByTagWithSeveralAttributes {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/input-form-demo.html" );
         List<WebElement> elements = driver.findElements( By.tagName( "input" ) );

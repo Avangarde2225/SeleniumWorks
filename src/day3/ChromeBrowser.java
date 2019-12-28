@@ -1,4 +1,4 @@
-package day3;
+package src.day3;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,18 +10,23 @@ import java.util.List;
 
 public class ChromeBrowser {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
-        driver.get( "file:///D:/Project/seleniumWorking/src/day3/resources/form.html" );
+        driver.get( "file:///C:/Users/suler/IdeaProjects/selenium3/src/day3/resources/form.html" );
+
         WebElement text = driver.findElement( By.name( "text" ) );
         text.sendKeys( "This is my text" );
+
         WebElement password = driver.findElement( By.name( "password" ) );
         password.sendKeys( "Password" );
+
         WebElement textarea = driver.findElement( By.name( "textarea" ) );
         textarea.sendKeys( "Some text Area words" );
+
         WebElement checkbox = driver.findElement( By.name( "checkbox" ) );
         checkbox.click();
         List<WebElement> radio = driver.findElements( By.name( "radio" ) );
+
         WebElement secondElementOfRadio = radio.get( 1 );// [0, 1, 2].click
         secondElementOfRadio.click();
 
@@ -55,6 +60,6 @@ public class ChromeBrowser {
         System.out.println( currentUrl );
 
 // close the drive and associated windows
-        driver.quit();
+        //driver.quit();
     }
 }

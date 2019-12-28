@@ -1,4 +1,4 @@
-package day3.task;
+package src.day3.task;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +12,7 @@ public class SimpleFormTask1Solution {
         System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/basic-first-form-demo.html" );
+
         WebElement message = driver.findElement( By.id( "user-message" ) );
         String myMessage = "Test string!";
         message.sendKeys( myMessage );

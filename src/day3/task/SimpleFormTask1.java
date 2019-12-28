@@ -1,4 +1,4 @@
-package day3.task;
+package src.day3.task;
 
 public class SimpleFormTask1 {
     // https://www.seleniumeasy.com/test/basic-first-form-demo.html

@@ -1,4 +1,4 @@
-package day3;
+package src.day3;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +11,9 @@ import java.util.Map;
 
 public class CheckingValues {
     public static void main(String[] args) {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
-        driver.get( "file:///D:/Project/seleniumWorking/src/day3/resources/form.html" );
+        driver.get( "file:///C:/Users/suler/IdeaProjects/selenium3/src/day3/resources/form.html" );
 
         Map<String, String> testValues = new HashMap<>(  );
         testValues.put( "h1",  "#0000ff");
@@ -22,7 +22,7 @@ public class CheckingValues {
         for(String key: testValues.keySet()){
             checkElementColorByName( driver, key, testValues.get( key ));
         }
-        driver.quit();
+        //driver.quit();
     }
 
     public static void checkElementColorByName(WebDriver driver, String myTag, String testColor) {

@@ -1,4 +1,4 @@
-package day7.tasks;
+package src.day7.tasks;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ public class Task4Solution {
     // then validate that "I'm an autocloseable success  message. I will hide in 5 seconds."
     // disappears, wait at least 10 seconds for it to disappear
     public static void main(String[] args) {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html" );
         driver.findElement( By.id("autoclosable-btn-success") ).click();

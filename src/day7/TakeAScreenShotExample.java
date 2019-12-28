@@ -1,4 +1,4 @@
-package day7;
+package src.day7;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;

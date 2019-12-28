@@ -1,4 +1,4 @@
-package day7.tasks;
+package src.day7.tasks;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,13 +12,17 @@ public class Task3Solution {
     // then click on X button on the message
     // validate the the message is invisible or not present
     public static void main(String[] args) {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html" );
         driver.findElement( By.id( "normal-btn-success" ) ).click();
+
         WebElement message = driver.findElement( By.cssSelector( ".alert-normal-success" ) );
+
         WebElement button = driver.findElement( By.cssSelector( ".alert-normal-success > button" ) );
+
         String text = message.getText().replace( button.getText(), "" ).trim();
+
         String test = "I'm a normal success message. To close use the appropriate button.";
         // ternary expression!
         System.out.println( test.equals( text ) ? "Success!" : "Failure!" );
