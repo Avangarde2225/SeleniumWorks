@@ -18,13 +18,18 @@ public class ModalWindowClickProblem {
             WebElement element = driver.findElement( By.cssSelector( ".modal-footer" ) ) ;
             element.click();
         }
+
+
         Thread.sleep(2000);
         click.click();
         click = driver.findElement( By.id( "restart-ad" ) ) ;
         click.click();
 
-//        driver.findElement( By.id( "restart-ad" ) ).click();
-//        driver.findElement( By.id( "restart-ad" ) ).click();
+
+        Thread.sleep( 2000 );
+        click.click();
+        click = driver.findElement( By.id( "restart-ad" ) );
+        click.click();
 
 //        driver.quit();
     }
