@@ -1,4 +1,4 @@
-package src.day3;
+package day3;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ public class ChromeBrowser {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
-        driver.get( "file:///C:/Users/suler/IdeaProjects/selenium3/src/day3/resources/form.html" );
+        driver.get( "file:///C:/Users/suler/IdeaProjects/SeleniumWorksNew/src/day3/resources/form.html" );
 
         WebElement text = driver.findElement( By.name( "text" ) );
         text.sendKeys( "This is my text" );

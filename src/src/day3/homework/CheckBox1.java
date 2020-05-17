@@ -20,6 +20,6 @@ public class CheckBox1 {
         String text = message.getText();
         System.out.println(text);
 
-        driver.quit();
+        //driver.quit();
     }
 }
