@@ -16,8 +16,11 @@ public class CountingElementsOnPage {
         driver.get( "file:///D:/Project/seleniumWorking/src/day3/resources/form.html" );
 
         List<String> list = Arrays.asList( "h1", "h2", "h3", "p", "input", "option", "br", "select" );
+
         List<String> tagsForTesting = new ArrayList<>( list );
-        tagsForTesting.add( "form" );
+
+        tagsForTesting.add( "form" ); // to check if accepts any more of tags
+
         for(String tag : tagsForTesting) {
             printNumberOfElementsOnAPage( driver, tag );
         }
