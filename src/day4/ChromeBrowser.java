@@ -14,7 +14,9 @@ public class ChromeBrowser {
        // driver.quit();
         driver.get("https://www.seleniumeasy.com/test/basic-first-form-demo.html");
 
-        WebElement element = driver.findElement(By.cssSelector("input[placeholder='Please enter your Message']"));
+        //WebElement element = driver.findElement(By.cssSelector("input[placeholder='Please enter your Message']"));
+
+        WebElement element = driver.findElement(By.cssSelector("input.form-control[type=text]")); //using . for class
 
         element.sendKeys("Personal message");
 
