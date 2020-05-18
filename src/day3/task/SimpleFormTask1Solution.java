@@ -1,4 +1,4 @@
-package src.day3.task;
+package day3.task;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class SimpleFormTask1Solution {
     public static void main(String[] args) {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/basic-first-form-demo.html" );
 
