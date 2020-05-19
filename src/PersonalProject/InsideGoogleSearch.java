@@ -1,4 +1,4 @@
-package day3.task;
+package PersonalProject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -9,9 +9,9 @@ import java.util.List;
 
 public class NotTest {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
-        driver.get( "file:///D:/Project/seleniumWorking/src/day5/resources/not.html" );
+        driver.get( "file:///C:/Users/suler/IdeaProjects/SeleniumWorksNew/src/day5/resources/not.html" );
         List<WebElement> elements = driver.findElements( By.cssSelector( "input:not(.required)" ) );
         for(WebElement element : elements) {
             System.out.println(element.getAttribute( "name" ));

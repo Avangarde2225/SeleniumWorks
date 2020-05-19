@@ -1,4 +1,4 @@
-package src.day4;
+package day4;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
