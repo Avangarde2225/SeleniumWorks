@@ -14,7 +14,7 @@ public class FindByXPathSolution {
     // by index,
     // also by child
     public static void main(String[] args) {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/input-form-demo.html" );
         WebElement email = driver.findElement( By.xpath( "//*[@placeholder='E-Mail Address']" ) );

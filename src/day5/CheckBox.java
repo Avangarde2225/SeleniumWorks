@@ -16,6 +16,7 @@ public class CheckBox {
         System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/basic-checkbox-demo.html" );
+
         List<WebElement> uncheckedBoxes = driver.findElements( By.cssSelector( ".cb1-element:not(:checked)" ) );
         int sizeBefore = uncheckedBoxes.size();
 

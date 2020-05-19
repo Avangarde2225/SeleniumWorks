@@ -11,7 +11,7 @@ public class StateOfInput {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
-        driver.get( "file:///C:/Users/suler/IdeaProjects/SeleniumWorksNew/src/day5/resources/stateOfCheckbox.html" );
+        driver.get( "file:///C:/Users/suler/IdeaProjects/SeleniumWorksNew/src/day5/resources/stateOfInput.html" );
         List<WebElement> elements = driver.findElements( By.cssSelector( "input:not(:disabled)" ) );
         for(WebElement element : elements) {
             System.out.println(element.getAttribute( "name" ));
