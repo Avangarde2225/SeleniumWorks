@@ -1,4 +1,4 @@
-package src.day7.tasks;
+package day7.tasks;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,16 +27,10 @@ public class Task2 {
 
 
     private static void clickAndValidateButtons(WebDriver driver, int num) {
-        WebElement btn = driver.findElement( By.xpath("//*[@onclick='addElement()']"));
+        WebElement btn = driver.findElement(By.xpath("//*[@onclick='addElement()']"));
         for (int i = 0; i < num; i++) {
             btn.click();
         }
-        List<WebElement> list = driver.findElements(By.className("added-manually"));
-        if (list.size() == num) {
-            System.out.println("success!");
-        }
-        else
-            System.out.println("fail!");
     }
 
     private static void deleteAndQuit(WebDriver driver, int num) {

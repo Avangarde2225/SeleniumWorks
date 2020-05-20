@@ -1,4 +1,4 @@
-package src.day7.tasks;
+package day7.tasks;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,13 +15,23 @@ public class Task3 {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html");
+        driver.manage().window().maximize();
 
-        WebElement element = driver.findElement(By.id("normal-btn-success"));
-        element.click();
-        System.out.println("Message is:" + element.getText());
+        WebElement msgBeforeClick = driver.findElement(By.cssSelector("#normal-btn-success"));
+        msgBeforeClick.click();
 
-        driver.findElement(By.xpath("//*[@class='close']")).click();
+        WebElement msgAfterClick = driver.findElement(By.cssSelector(".alert-normal-success"));
+        System.out.println(msgAfterClick.getText());
+
+        WebElement button = driver.findElement(By.cssSelector(".alert-normal-success > button"));
+        button.click();
+
+        String text = msgAfterClick.getText().replace( button.getText(), "" ).trim();
 
 
+
+        //driver.findElement(By.xpath("//*[@class='close']")).click();
+
+        driver.quit();
     }
 }

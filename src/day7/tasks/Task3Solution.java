@@ -1,4 +1,4 @@
-package src.day7.tasks;
+package day7.tasks;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +15,7 @@ public class Task3Solution {
         System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html" );
+
         driver.findElement( By.id( "normal-btn-success" ) ).click();
 
         WebElement message = driver.findElement( By.cssSelector( ".alert-normal-success" ) );
