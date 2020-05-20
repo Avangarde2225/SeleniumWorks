@@ -1,7 +1,11 @@
-package src.day7.tasks;
+package day7.tasks;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 public class Task1 {
     // http://the-internet.herokuapp.com/add_remove_elements/
@@ -14,6 +18,25 @@ public class Task1 {
         WebDriver driver = new ChromeDriver();
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
 
+        clickToValidate(driver,100);
+    }
+
+        public static void clickToValidate (WebDriver driver,int num){
+            WebElement element = driver.findElement(By.xpath("//button[@onclick='addElement()']"));
+
+            for (int i = 0; i < num; i++) {
+                element.click();
+            }
+
+            List<WebElement> list = driver.findElements(By.xpath("//button[@class='added-manually']"));
+            if (list.size() == num) {
+                System.out.println("Success");
+            } else {
+                System.out.println("Failure");
+            }
+
+        }
+
 
     }
-}
+
