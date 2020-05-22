@@ -1,4 +1,4 @@
-package src.day7;
+package day7;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -11,17 +11,23 @@ import java.io.IOException;
 
 public class TakeAScreenShotExample {
     public static void main(String[] args) throws InterruptedException, IOException {
-        System.setProperty( "webdriver.chrome.driver", "D:\\TechnoStudy\\Selenium\\ChromeDriver\\chromedriver.exe" );
+        System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://jsfiddle.net/daulet2030/eLy027xg/" );
+
         WebDriverWait wait = new WebDriverWait(driver, 15);
         driver.switchTo().frame("result");
+
         WebElement webElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#test1")));
+
         System.out.println(webElement.getTagName());
+
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File DestFile=new File("./test.png");
+
+        File DestFile=new File("./testNew.png");
+
         FileUtils.copyFile(file, DestFile);
 
-//        driver.quit();
+           driver.quit();
     }
 }

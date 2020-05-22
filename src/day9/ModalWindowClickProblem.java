@@ -1,4 +1,4 @@
-package src.day9;
+package day9;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +8,9 @@ public class ModalWindowClickProblem {
         System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "http://the-internet.herokuapp.com/entry_ad" );
+
         Thread.sleep( 2000 );
+
         WebElement click = driver.findElement( By.id( "restart-ad" ) );
         click.click();
 

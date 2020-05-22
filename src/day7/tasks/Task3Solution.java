@@ -15,6 +15,7 @@ public class Task3Solution {
         System.setProperty( "webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe" );
         WebDriver driver = new ChromeDriver();
         driver.get( "https://www.seleniumeasy.com/test/bootstrap-alert-messages-demo.html" );
+        driver.manage().window().maximize();
 
         driver.findElement( By.id( "normal-btn-success" ) ).click();
 
