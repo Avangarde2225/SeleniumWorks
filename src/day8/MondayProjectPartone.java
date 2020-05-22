@@ -1,4 +1,4 @@
-package src.day8;
+package day8;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
