@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <style>
+    body {background: gray; text-align: center;}
+    h1 {color: blue;}
+    p {margin: 20px;}
+    input { margin: 0;}
+
+    </style>
+
+    <!--
+        give your div some styles, like background color, width and center it in the middle of the screen
+        give your form inputs some styles, like font, margins and color of text
+    -->
+</head>
+<body>
+<div id = "profile">
+  <H1> Signup Form </H1>
+<!--
+   Create a form with:
+    * 1 text input called "username"
+    * 2 password inputs, called "password" and "password repeat"
+    * 1 text area called "address"
+    * 2 radio buttons with values "male" and "female" and called "sex"
+    * 1 dropdown with selections: free, basic, enterprise. Call this dropdown "plan"
+    * 1 checkbox with name "agreement" and with text "I agree to terms and conditions"
+    * 1 submit image button that uses "submit.png"
+   Put your form inside a div
+-->
+<form action="/someUrl" method="GET">
+    <p>Username: <br> <input name ="Username" type="text" placeholder="Enter Username" required/></p>
+    <p>Password: <br> <input name = "Password" type="password" placeholder="Enter Password" required/></p>
+    <p>Confirm Password: <br> <input name = "Confirm Password" type="password" placeholder="Confirm Password" required/></p>
+    <p>Address: <br> <textarea name = "Address" placeholder="Enter Address"></textarea></p>
+    <p>
+        Plan: <br>
+        <select name="Plan">
+            <option id="option1">Free</option>
+            -->
+            <option id="option2">Basic</option>
+            -->
+            <option id="option3">Enterprise</option>
+            -->
+        </select>
+    </p>
+
+    <p>
+    <!--    Gender: <br> <br>
+        <input id = "radio1" type="radio" value="Male" style="vertical-align: middle; margin: 0px;"/><u>Male</u>  <br>
+        <input id="radio2" type="radio"   value="Female" style="vertical-align: middle; margin: 0px;"/><u>Female</u>
+    </p>
+-->
+    Gender:
+    <br><input type="radio" name="sex" id="female">Female</input> <br>
+    <input type="radio" name="sex" id="male">Male</input><br>
+    </p>
+
+    <p>
+        Agreement <br> <br>
+        <input type="checkbox" name="checkbox"> I agree to terms and conditions
+    </p>
+
+    <button id="submit" name="submit" class="button" >
+        <img src="C:\Users\suler\IdeaProjects\selenium3\src\day2\resources\pictures\download.png" alt="submit button" style="width:100px;height:50px;">
+
+        <!-- <input type="submit" img src ="submit.png" value="Submit button"/> -->
+    </button>
+
+
+</form>
+</div>
+</body>
+</html>
