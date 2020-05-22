@@ -28,10 +28,10 @@ public class ModalWindowClickProblem {
         click.click();
 
 
-        Thread.sleep( 2000 );
-        click.click();
-        click = driver.findElement( By.id( "restart-ad" ) );
-        click.click();
+//        Thread.sleep( 2000 );
+//        click.click();
+//        click = driver.findElement( By.id( "restart-ad" ) );
+//        click.click();
 
 //        driver.quit();
     }
